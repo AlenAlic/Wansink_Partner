@@ -102,6 +102,8 @@ def main():
                         # 11. Rename all Cards in source List
                         for card in cards:
                             new_name = month_abbreviation_dict[now.month - 1] + " - " + card['name']
+                            # TODO lelijke fix verwijderen
+                            new_name.replace('&', '%26')
                             requests.put(rename_card.format(id=card['id'], name=new_name))
                         # 12. Move all cards from source List to target List
                         requests.post(url=move_all_cards.format(id=list_id_source, board=board_id_target,
