@@ -18,7 +18,7 @@ def err_no_list_in_board(list_name, board):
 
 
 def err_no_card_in_list_in_board(card, list_name, board):
-    print(string_no_card_in_list_in_board.format(list_name=list_name, board=board))
+    print(string_no_card_in_list_in_board.format(card=card, list_name=list_name, board=board))
     print('\n')
 
 
